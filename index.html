@@ -118,6 +118,22 @@
           <img class="stretch" src="media/vectors.svg" alt="adding vectors">
         </section>
         <section>
+          <h2>Text</h2>
+          <pre><code class="python">font = pygame.font.Font(
+  None,  # filename
+  64  # in pixels
+)
+
+...
+
+text_surface = font.render(
+  'Hello',  # text
+  1,  # antialias
+  (200, 200, 0)  # color
+)
+</code></pre>
+        </section>
+        <section>
           <h2>Sounds</h2>
           <pre><code class="python">pygame.mixer.init()
 pygame.init()
