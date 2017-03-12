@@ -101,6 +101,16 @@
           <h2>Blit position</h2>
           <img class="stretch" src="media/blit-pos.png" alt="correcting the blit">
         </section>
+        <section>
+          <h2>Rotation</h2>
+          <pre><code class="python">
+          surface = pygame.transform.rotozoom(
+              original_surface,
+              angle,  # in degrees, counterclockwise
+              scale  # set to 1.0 for rotation only
+          )
+          </code></pre>
+        </section>
 			</div>
 		</div>
 
