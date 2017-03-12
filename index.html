@@ -103,13 +103,11 @@
         </section>
         <section>
           <h2>Rotation</h2>
-          <pre><code class="python">
-          surface = pygame.transform.rotozoom(
-              original_surface,
-              angle,  # in degrees, counterclockwise
-              scale  # set to 1.0 for rotation only
-          )
-          </code></pre>
+          <pre><code class="python">surface = pygame.transform.rotozoom(
+    original_surface,
+    angle,  # in degrees, counterclockwise
+    scale  # set to 1.0 for rotation only
+)</code></pre>
         </section>
         <section>
           <h2>Acceleration vs direction</h2>
@@ -118,6 +116,19 @@
         <section>
           <h2>Vectors</h2>
           <img class="stretch" src="media/vectors.svg" alt="adding vectors">
+        </section>
+        <section>
+          <h2>Sounds</h2>
+          <pre><code class="python">pygame.mixer.init()
+pygame.init()
+
+sound = pygame.mixer.Sound('laser.wav')
+
+...
+
+sound.play()</code></pre>
+          <p>Fixing sound lag:</p>
+          <pre><code class="python">pygame.mixer.init(buffer=1024)</code></pre>
         </section>
 			</div>
 		</div>
