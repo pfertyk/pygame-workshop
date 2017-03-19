@@ -151,8 +151,23 @@ sound.play()</code></pre>
           <p>Make the ESC key (K_ESCAPE) close the game</p>
         </section>
         <section>
-          <h2>Split the asteroid</h2>
+          <h2>Splitting the asteroid</h2>
           <img class="stretch" src="media/split.png" alt="splitting the asteroid">
+        </section>
+        <section>
+          <h2>Cleaning up the code</h2>
+          <pre><code class="python">from itertools import chain
+
+...
+
+for obj in chain(asteroids, bullets, starship):
+    obj.animate()
+    obj.draw(SCREEN)
+          </code></pre>
+          <p>Starship can be None:</p>
+          <pre><code class="python">
+chain(asteroids, bullets, (starship, ) if starship else ()):
+          </code></pre>
         </section>
 			</div>
 		</div>
