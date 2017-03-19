@@ -162,12 +162,9 @@ sound.play()</code></pre>
 
 for obj in chain(asteroids, bullets, starship):
     obj.animate()
-    obj.draw(SCREEN)
-          </code></pre>
+    obj.draw(SCREEN)</code></pre>
           <p>Starship can be None:</p>
-          <pre><code class="python">
-chain(asteroids, bullets, (starship, ) if starship else ()):
-          </code></pre>
+          <pre><code class="python">chain(asteroids, bullets, (starship, ) if starship else ())</code></pre>
         </section>
         <section>
           <h2>Exercise 2</h2>
@@ -177,6 +174,20 @@ chain(asteroids, bullets, (starship, ) if starship else ()):
             <li>Medium = 3</li>
             <li>Small = 1</li>
           </ul>
+          <p><small>Hint: use the radius</small></p>
+        </section>
+        <section>
+          <h2>Exercise 3</h2>
+          <p>Save the best (winning) score in a file</p>
+          <pre><code class="python">import os.path
+best_score = 0
+
+if os.path.isfile('score.txt'):
+...
+else:
+...</code></pre>
+<p>Creating a file if it doesn't exist:</p>
+<pre><code>with open('score.txt', 'w+') as score_file:</code></pre>
         </section>
         <section>
           <h2>Notable Pygame games</h2>
